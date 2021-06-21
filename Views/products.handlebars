@@ -1,0 +1,48 @@
+<div class="main-container">
+    <div class="toolbar-collection">
+        <div class="toolbar__group">
+            <div class="toolbar__item">FILTER<span class="material-icons-outlined">expand_less</span></div>
+        </div>
+        <div class="toolbar__group-icon">
+            <div class="toolbar__item--icon"><span class="material-icons-outlined">crop_square</span></div>
+            <div class="toolbar__item--icon"><span class="material-icons-outlined">grid_view</span></div>
+        </div>
+    </div>
+    <section class="section">
+        <p class="section_subtitle">THE BEST clothes</p>
+        <h1 class="section_title">woman clothes</h1>
+        <div class="container">
+            <div class="row demo-card-collection">
+                {{#if products.length}}
+                    {{#each products}}
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card demo-card-prod  ">
+                                <a class="card-information" href="./product.html">
+                                    <div class="card__media">
+                                        <img src="./img/{{dataValues.imgURL}}" alt="clothes">
+                                    </div>
+                                    <div class="card__primary">
+                                        <div class="card__title">{{dataValues.name}}</div>
+                                        <div class="card__subtitle">StylesG</div>
+                                    </div>
+                                </a>
+                                <div class="card__actions">
+                                    <div class="card__actions-s">
+                                        <p class="card__price">{{dataValues.price}} Bs.</p>
+                                    </div>
+                                    <div class="card__actions-icons">
+                                        <button class="icon-btn material-icons-outlined" title="Favorite">favorite_border</button>
+                                        <button class="icon-btn material-icons-outlined" title="Shopping">shopping_bag</button>
+                                        <button class="icon-btn material-icons-outlined" title="More option">more_vert</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                {{else}}
+                    <p>No existe products</p>   
+                {{/if}}
+            </div>
+        </div>
+    </section>        
+</div>

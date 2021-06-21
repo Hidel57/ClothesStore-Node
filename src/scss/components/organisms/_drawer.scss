@@ -1,0 +1,123 @@
+.drawer-container {
+    display: flex;
+    height: calc(100vh - 72px);
+}
+
+.drawer-app-content {
+    position: relative;
+    margin-left: 256px;
+}
+
+.drawer {
+    width: 256px;
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    height: 100%;
+    border-right-color: rgba(0,0,0,.12);
+    border-right-width: 1px;
+    border-right-style: solid;
+    background-color: #fff;
+    overflow: hidden;
+    position: fixed;
+    &__header {
+        padding: 0px 16px;
+        min-height: 64px;
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 500;
+        letter-spacing: .0125em;
+        line-height: normal;
+
+        &::before {
+            display: inline-block;
+            width: 0;
+            height: 30px;
+            content: "";
+            vertical-align: 0;
+        }
+    }
+
+    &__subtitle {
+        font-size: .875rem;
+        font-weight: 400;
+        letter-spacing: .018em;
+        line-height: normal;
+        color: $text-disabled-color;
+        
+        &::before {
+            display: inline-block;
+            width: 0;
+            height: 20px;
+            content: "";
+            vertical-align: 0;
+        }
+
+    }
+    &__content {
+        height: 100%;
+        overflow-y: auto;
+    }
+}
+
+
+.list {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+
+    &-item {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        position: relative;
+        height: 40px;
+        margin: 4px 8px;
+        padding: 0 8px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: .01em;
+        border-radius: 4px;    
+        cursor: pointer;
+
+        &-activated {
+            color: $primary-color;
+            background-color: $background-activated-color;
+        }
+
+        &:hover:not(.list-item-activated) {
+            background-color: rgba(0,0,0,.04);
+        }
+    }
+
+    &-title {
+        font-size: .875rem;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: .017857em;
+        padding: 0 16px;
+        color: rgba(0,0,0,.6);
+        height: 24px;
+        margin-bottom: 8px;
+        &::before {
+            display: inline-block;
+            width: 0;
+            height: 24px;
+            content: "";
+            vertical-align: 0;
+        }
+    }
+
+    &-divider {
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgba(0,0,0,.12);
+        margin: 4px 0;
+    }
+}
+
+.form-item {
+    padding: 1rem 0;
+}

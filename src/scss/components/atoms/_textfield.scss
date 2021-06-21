@@ -1,0 +1,158 @@
+/*
+    TEXT-FIELD
+    *   input
+    1-  TEXT-FIELD-FILLED
+    2.- TEXT-FIELD-OUTLINE
+    3.- TEXT-FIELD-NEUMORPHIC
+*/
+
+/* input */
+.input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: .009357em;
+    background: none;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+    TEXT-FIELD-FILLED
+*/
+
+.text-field--filled {
+    background-color: $background-disabled-color;
+    height: 56px;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+
+    &:hover {
+        background-color: $background-hover-color;
+    }
+    &__input {
+        height: 100%;
+        border-bottom: 1px solid;
+        border-bottom-color: $disabled-color;
+        padding: 16px 16px 6px;
+
+        &:hover {
+            border-bottom: 1px solid;
+        }
+
+        &:focus {
+            border-bottom: 2px solid;
+            border-bottom-color: $primary-color;
+        }
+    
+    }
+
+    &__label {
+        color: $text-disabled-color;
+        left: 16px;
+        right: auto;
+        position: absolute;
+        top: 40%;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        transition: .2s;
+        cursor: text;
+    }
+}
+
+.text-field__input:valid + .text-field__label {
+    color: $text-disabled-color;
+    font-size: .8rem;
+    top: 14%;
+}
+
+.text-field__input:focus + .text-field__label {
+    color: $primary-color;
+    font-size: .8rem;
+    top: 14%;
+}
+
+/*
+    TEXT-FIELD-OUTLINE
+*/
+.text-field--outline {
+    position: relative; //56px demo
+
+    &__input {
+        border: 1px solid $disabled-color;
+        padding: 16px 16px;
+        border-radius: 4px;
+        background-color: #fff;
+        &:hover {
+            border: 1px solid $hover-color;
+        }
+        &:focus {
+            border: 2px solid $primary-color;
+        }
+        &--textarea {
+            height: 7rem;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        color: $text-disabled-color;
+        left: 16px;
+        top: 32%;
+        transition: .2s;
+    }
+}
+
+
+.text-field--outline__input:valid + .text-field--outline__label {
+    color: $text-disabled-color;
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    padding: 0 6px;
+    top: -8px;
+}
+
+.text-field--outline__input:focus + .text-field--outline__label {
+    font-size: 0.8rem;
+    border-radius: 4px;
+    top: -8px;
+    padding: 0 6px;
+    background-color: #fff;
+    color: $primary-color;
+}
+// .text-field--outline__input:invalid {
+//     border: 2px solid $error-color;
+
+.text-field-invalid > input:invalid {
+    border-color: $error-color;
+}
+.text-field-invalid > :empty {
+    border-color: $error-color;
+}
+
+.text-field-invalid > .text-field--outline__label  {
+    color: $error-color;
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    padding: 0 6px;
+    top: -8px;
+}
+
+
+
+/*
+    TEXT-FIELD-NEUMORPHIC
+*/
+
+.text-field--neumorphic {
+    height: 56px;
+    border-radius: 4px;
+    box-shadow: inset 8px 8px 8px #cbced1,
+                inset -8px -8px 8px #fff;
+    &__input {
+        padding: 20px 16px;
+    }
+}

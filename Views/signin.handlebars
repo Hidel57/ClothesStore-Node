@@ -1,0 +1,34 @@
+<div class="main-container container">
+    <div class="col col-md-6">
+        <h3 class="section_title3">Sign in</h3>
+        {{#if errors}}
+            {{#each errors}}
+                {{dataValues.message}}
+            {{/each}}
+        {{/if}}
+        <form class="form" action="sign-in" method="POST">
+            <div class="form-item">
+                <div class='text-field--outline'>
+                    <input class='input text-field--outline__input' type='text' id='name' name='name' required />
+                    <label class='text-field--outline__label' htmlFor='name'>name</label>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class='text-field--outline'>
+                    <input class='input text-field--outline__input' type='email' id='email' name='email' required />
+                    <label class='text-field--outline__label' htmlFor='email'>email</label>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class='text-field--outline'>
+                    <input class='input text-field--outline__input' type='password' id='password' name='password' required />
+                    <label class='text-field--outline__label' htmlFor='password'>password</label>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <input type="submit" class="btn btn--refilled btn__full" value="Log in">
+            </div>
+        </form>
+    </div>  
+</div>

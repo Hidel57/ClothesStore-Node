@@ -1,0 +1,103 @@
+.tab-bar {
+    width: 100%;
+}
+
+.tab-scroller {
+    position: relative;
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.tab {
+    height: 48px;
+    font-size: .875rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+    left: .01em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 24px;
+    position: relative;
+    flex: 1 0 auto;
+    justify-content: center;
+    background: none;
+
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1;
+
+    &--stacked {
+        height: 72px;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        color: $text-disabled-color;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__text {
+        line-height: 1;
+    }
+     
+    &-indicator {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: transparent;
+        transition: transform .25s cubic-bezier(0.4, 0, 0.48, 0.9),
+            -webkit-transform .25s cubic-bezier(.4,0,.2,1);
+
+        &--actived {
+            background-color: $background-activated-color;
+            border-bottom-color: $primary-color;
+        }
+    }
+}
+
+.tab-indicator--actived + .tab__content{
+    color: $primary-color;
+    border-bottom-color: $primary-color;
+}
+
+.tab-indicator:hover:not(.tab-indicator--actived) {
+    background-color: $background-hover-color;
+}
+
+.tab__content svg {
+    fill: $text-disabled-color;
+}
+
+.tab-indicator--actived+.tab__content svg {
+    fill: $primary-color;
+}
+
+.tab--stacked .tab__content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab:not(.tab--stacked) .tab__text {
+    padding-left: 8px;
+}
+
+.tab--stacked .tab__text {
+    padding-top: 6px;
+    padding-bottom: 4px;
+}

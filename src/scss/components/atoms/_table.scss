@@ -1,0 +1,31 @@
+.data-table {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,.12);
+    overflow-x: auto;
+
+    &__table {
+        min-width: 100%;
+        border: 0;
+        white-space: nowrap;
+        border-collapse: collapse;
+    }
+
+    &__content {
+        font-family:'Times New Roman', Times, serif;
+        font-size: .875rem;
+    }
+
+    &__row {
+        border-top: 1px solid rgba(0,0,0,.12);
+    }
+    &__cell {
+        height: 52px;
+    }
+}
+.data-table__cell, .data-table__header-cell {
+    height: 52px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: rgba(0,0,0,.87)
+}

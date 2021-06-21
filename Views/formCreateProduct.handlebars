@@ -1,0 +1,50 @@
+<div class="main-container container">
+    <div class="col col-md-6">
+        <h3 class="section_title3">Create Register</h3>
+        <form class="form" action="/create-product" method="POST">
+            <div class="form-item">
+                <div class='text-field--outline'>
+                    <input class='input text-field--outline__input' type='text' id='name' name='name' required />
+                    <label class='text-field--outline__label' htmlFor='name'>name</label>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class='text-field--outline'>
+                    <input class='input text-field--outline__input' type='text' id='imgURL' name='imgURL' required />
+                    <label class='text-field--outline__label' htmlFor='imgURL'>imgURL</label>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class='text-field--outline'>
+                    <input class='input text-field--outline__input' type='text' id='size' name='size' required />
+                    <label class='text-field--outline__label' htmlFor='size'>Size</label>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class='text-field--outline'>
+                    <input class='input text-field--outline__input' type='text' id='color' name='color' required />
+                    <label class='text-field--outline__label' htmlFor='color'>Color</label>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class='text-field--outline'>
+                    <input class='input text-field--outline__input' type='text' id='price' name='price' required />
+                    <label class='text-field--outline__label' htmlFor='price'>Price</label>
+                </div>
+            </div>
+            <div class="select select-outlined">
+                <select class="select-outlined__select" name="categoryId" id="" required>
+                    <option class="option" value="">Selected one</option>
+                    {{#each categories }}
+                    <option class="option" value="{{dataValues.id}}">{{dataValues.name}}</option>
+                    {{/each}}
+                </select>
+                <label for="categoryId" class="select-outlined__label">Category</label>
+            </div>
+
+            <div class="form-item">
+                <input type="submit" class="btn btn--refilled btn__full" value="Create Proyect">
+            </div>
+        </form>
+    </div>  
+</div>

@@ -1,0 +1,37 @@
+.footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    box-shadow: 10px 20px 40px rgba(0,0,0,.4);
+
+    &-row {
+      margin-top: -1rem;  
+    } 
+
+    &__title {
+        color: $primary-color;
+        font-size: .875rem;
+        font-weight: 600;
+        line-height: 1rem;
+        padding-bottom: 1.5rem;
+        margin-top: 1rem;
+    }   
+    &__item {
+        color: $secondary-color;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2rem;
+
+        & .footer__item {
+            width: 4rem;
+            text-align: center;
+        }
+    }
+}

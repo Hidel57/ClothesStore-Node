@@ -1,0 +1,43 @@
+/*
+    LAYOUT
+*/
+
+.cross-center {
+    align-items: center;
+    align-content: center;
+}
+
+.toright {
+    margin-right: 0;
+    margin-left: auto;
+}
+.toleft {
+    margin-right: auto;
+    margin-left: 0;
+}
+.tocenter {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.left-space {
+    margin-left: .5rem;
+}
+.right-space {
+    margin-right: .5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .left-space {
+        margin-left: 1rem;
+    }
+    .right-space {
+        margin-right: 1rem;
+    }
+    
+}
+
+.max-width {
+    width: 100%;
+}

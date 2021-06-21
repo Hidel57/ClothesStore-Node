@@ -1,0 +1,78 @@
+<div class="main-container">
+    <div class="drawer-container">
+        <div class="">
+            <aside class="drawer">
+                <div class="drawer-content">
+                    {{!-- <h6 class="list-title">Products</h6> --}}
+                    <nav class="list">
+                        <a href="#" class="list-item">All Products</a>
+                        {{#if categories.length}}
+                            {{#each categories}}
+                                <a href="/admin/categories/{{dataValues.url}}" class="list-item">{{dataValues.name}}</a>
+                            {{/each}}
+                        {{else}}
+                            <p>categories not Exits</p>   
+                        {{/if}}
+                        <a href="/log-out" class="list-item btn btn--refilled">Log out</a>
+                    </nav>
+                </div>
+            </aside>
+        </div>
+        <div class="drawer-app-content">
+            <div class="full-container">
+                <form class="form" action="create-category" method="POST">
+                    <div class="form-item">
+                        <div class='text-field--outline'>
+                            <input class='input text-field--outline__input' type='text' id='name' name='name' required />
+                            <label class='text-field--outline__label' htmlFor='name'>name</label>
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <input type="submit" class="btn btn--refilled btn__full" value="Create a new category">
+                    </div>
+                </form>
+                <section class="section">
+                    <p class="section_title">Products Admin</p>
+                    {{#if products.length}}
+                    <div class="data-table">
+                        <table class="data-table__table">
+                            <thead>
+                                <tr class="data-table__header-row">
+                                    {{#each productsKey}}
+                                    <th class="data-table__header-cell">{{this}}</th>
+                                    {{/each }}
+                                    <th class="data-table__header-cell">Edit</th>
+                                    <th class="data-table__header-cell">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody class="data-table__content">
+                                {{#each products}}
+                                <tr class="data-table__row">
+                                    <td class="data-table__cell">{{dataValues.name}}</td>
+                                    <td class="data-table__cell">{{dataValues.imgURL}}</td>
+                                    <td class="data-table__cell">{{dataValues.color}}</td>
+                                    <td class="data-table__cell">{{dataValues.price}}</td>
+                                    <td class="data-table__cell">{{dataValues.size}}</td>
+                                    <td class="data-table__cell">
+                                        <a href="/admin/update-product/{{dataValues.id}}" class="icon-btn material-icons-outlined" title="Edit">edit</a>
+                                    </td>
+                                    <td class="data-table__cell">
+                                        <a
+                                            href="/delete-product/{{dataValues.id}}"
+                                            id='deleteProyect' class="icon-btn material-icons-outlined" title="Delete">delete</a>
+                                    </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                    {{else}}
+                        <p>No existe products</p>   
+                    {{/if}}
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+

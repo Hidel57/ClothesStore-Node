@@ -1,0 +1,95 @@
+.banner {
+    background-color: #000;
+    color: white;
+    position: relative;
+    text-align: center;
+
+    &__hero-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &-container__title {
+        position: relative;
+        height: max-content;
+        width: max-content;
+        margin: auto;
+        background-color: transparent;
+        padding: 1rem 2rem;
+    }
+    
+    &__title {
+        // font-family: 'Lucida', serif;
+        font-size: 3.5rem;
+        font-weight: 300;
+        line-height: 3.5rem;
+    }
+    &-container__subtitle {
+        position: relative;
+        height: max-content;
+        width: max-content;
+        margin: auto;
+        background-color: $primary-color;
+        padding: .5rem 1rem;
+    }
+    
+    &__subtitle {
+        // font-family: 'Lucida', serif;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+}
+@media screen and (min-width: 576px) {
+    .banner {
+        &__title {
+            font-size: 4rem;
+            line-height: 4rem;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .banner {
+        &__title {
+            font-size: 5.5rem;
+            line-height: 5.5rem;
+        }
+    }
+}
+
+
+
+/* DEMOS */
+
+.demo-banner {
+    padding-top:4.5em;
+    padding-bottom: 5.5rem;
+}
+@media screen and (min-width: 768px) {
+    .demo-banner {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+}
+
+.demo-banner-primary {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    padding-top:13rem;
+    padding-bottom: 16rem;
+}
+
+@media screen and (min-width: 576px) {
+    .demo-banner-primary {
+        padding-top: 11rem;
+        padding-bottom: 13rem;
+    }
+}

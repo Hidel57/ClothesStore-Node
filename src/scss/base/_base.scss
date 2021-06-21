@@ -1,0 +1,103 @@
+
+/**************
+--SCROLL BODY--
+***************/
+
+/* Tamaño del scroll */
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+   /* Estilos barra (thumb) de scroll */
+  body::-webkit-scrollbar-thumb {
+    background: $tertiary-color;
+    border-radius: 4px;
+  }
+  
+  body::-webkit-scrollbar-thumb:active {
+    background-color: $secondary-color;
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background: $secondary-color;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+   /* Estilos track de scroll */
+  body::-webkit-scrollbar-track {
+    background: $quintuary-color;
+    border-radius: 4px;
+  }
+  
+  body::-webkit-scrollbar-track:hover, 
+  body::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+  }
+
+
+/*************
+LINK
+**************/
+
+.link {
+    color: $primary-color;
+    font-weight: 600;
+    
+    &-container {
+      margin-bottom: 3rem;
+    }
+
+    &:hover {
+        color: $secondary-color;
+    }
+}
+.link.link--actived {
+  color: $secondary-color;
+  border-bottom: 1px solid $quartary-color;
+}
+
+
+/*************
+ICONS
+**************/
+
+.icon {
+    opacity: .7;
+    position: relative;
+    cursor: pointer;
+
+    &_num {
+        color: #fff;
+        font-family: serif;
+        font-size: .7rem;
+        font-weight: 600;
+        position: absolute;
+        top: .1rem;
+        width: 100%;
+        text-align: center;
+
+        &_container {
+            background-color: $secondary-color;
+            border-color: #fff;
+            border-radius: 50%;
+            height: 14px;
+            left: -4px;
+            position: absolute;
+            top: 14px;
+            width: 14px;
+        }
+        &_inner {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.material-icons-outlined.md-18 { font-size: 18px; }
+.material-icons-outlined.md-20 { font-size: 20px; }
+.material-icons-outlined.md-24 { font-size: 24px; }
+.material-icons-outlined.md-36 { font-size: 36px; }
+.material-icons-outlined.md-48 { font-size: 48px; }
+.material-icons-outlined.md-80 { font-size: 80px; }
